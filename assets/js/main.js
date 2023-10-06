@@ -244,6 +244,25 @@
       clickable: true
     }
   });
+  /**
+   * Portfolio Download
+   */
+  var downloadButton = document.getElementById("downloadButton");
+
+        // Add a click event listener to the button
+        downloadButton.addEventListener("click", function () {
+            // Create a link element
+            var link = document.createElement("a");
+            link.href = "assets/img/portfolio/Whitepaper.pdf"; // Replace with the actual path to your PDF file
+            link.download = "Portfolio.pdf"; // Set the desired file name for the downloaded file
+            link.target = "_blank"; // Open the link in a new tab (optional)
+
+            // Trigger a click event on the link to start the download
+            link.click();
+
+            // Clean up: remove the link element
+            document.body.removeChild(link);
+        });
 
   /**
    * Initiate Pure Counter 
