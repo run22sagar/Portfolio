@@ -1,4 +1,4 @@
-Thanks for downloading this template!
+Thanks for downloading!
 
 Author: shresthasagar.com
 
