@@ -41,7 +41,7 @@
       <h1><a href="index.html">Sagar Shrestha</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm a passionate <span>Technical Writer</span></h2>
+      <h2>I'm a passionate <span id="dynamic-text">Technical Writer</span></h2>
     <!--   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -925,6 +925,17 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const words = ["UI/UX Designer", "Technical Writer", "Content Strategist"];
+  let wordIndex = 0;
+
+  const dynamicText = document.getElementById("dynamic-text");
+
+  setInterval(() => {
+    wordIndex = (wordIndex + 1) % words.length; // Cycle through the words
+    dynamicText.textContent = words[wordIndex]; // Update the text content
+  }, 1000);
+  </script>
 
 </body>
 
